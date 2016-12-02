@@ -1,11 +1,110 @@
+<!DOCTYPE html>
 <html>
-   <body>
-   
-      <form action = "http://localhost:5000/uploader" method = "POST" 
+<head>
+	<link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" >
+	<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+	<meta charset=utf-8 />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>JS Bin</title>
+	<!--[if IE]>
+	  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<style>
+
+	.button {
+	    background-color:  #555555;
+	    border: none;
+	    color: white;
+	    padding: 15px 32px;
+	    text-align: center;
+	    text-decoration: none;
+	    display: inline-block;
+	    font-size: 16px;
+	    margin: 4px 2px;
+	    cursor: pointer;
+	    
+	    
+	}
+	.wrapper{
+	    text-align: center;
+	    
+	}
+
+
+	.fileUpload {
+	    position: relative;
+	    overflow: hidden;
+	    margin: 10px;
+	    text-align: center;
+	    background-color:  #555555;
+	    cursor: pointer;
+	    font-size:20px;
+
+	}
+	.fileUpload input.upload {
+	    position: absolute;
+	    top: 0;
+	    right: 0;
+	    margin: 0;
+	    padding: 0;
+	    font-size: 20px;
+	    cursor: pointer;
+	    opacity: 0;
+	    filter: alpha(opacity=0);
+	}
+
+
+	</style>
+</head>
+<body>
+	<div class="fileUpload btn btn-primary">
+		<span>UPLOAD IMAGE</span>
+		<input type="file" name="file" class="upload" onchange="readURL(this);" align="middle">
+	</div>
+
+	<img id="blah" src="#" alt="Your image will be displayed here" />
+
+<!--	<input type='file' onchange="readURL(this);" align="middle"/> 
+
+<form action = "http://localhost:5000/uploader" method = "POST" 
          enctype = "multipart/form-data">
-         <input type = "file" name = "file" />
-         <input type = "submit"/>
-      </form>
-      
-   </body>
+	<div class="wrapper">         
+		<input class ="button" type = "file" name = "file" />		
+        </div> 
+	<div class="fileUpload btn btn-primary">
+   		<span>UPLOAD IMAGE</span>
+    		<input type="file" name= "file" class="upload" />
+	</div>
+	<br>
+	 <input type = "submit" value="SUBMIT"/>
+	
+     </form>
+-->
+</body>
 </html>
+<script>
+function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#blah')
+                    .attr('src', e.target.result)
+                    .width(500)
+                    .height(500);
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+</script>
