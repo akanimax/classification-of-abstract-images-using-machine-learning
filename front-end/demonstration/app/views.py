@@ -3,6 +3,8 @@ from django.views.decorators.csrf import ensure_csrf_cookie
 from django.core.files.images import ImageFile
 from django.core.files.storage import FileSystemStorage
 from django.conf import settings
+import os
+import subprocess as sp
 import requests
 import json
 
@@ -66,7 +68,7 @@ def results(request):
         print (uploaded_file_url)
 
 
-        jsonList = controller()
+        jsonList = []; print(controller(uploaded_file_url.split("/")[-1])[0]);
         jsonList.append(
             {"Artist": "Akanimax", "Style": "something", "Genre": "somethingelse", "ColouremotionAnalysis": "Angry",
              "Brushstroke": "Soft"})
@@ -84,9 +86,11 @@ def results(request):
     return HttpResponse("error while storing image")
 
 
-def controller():
-    
-    return json
+def controller(image_path):
+	print(os.path.join(os.getcwd(), "app/scripts/computation.py"))
+	process = sp.Popen(["/home/ccenter/new/BE/front-end/demonstration/app/scripts/computation.py", image_path], stdout=sp.PIPE)
+	out = process.communicate()	    
+	return out
 
 
 
