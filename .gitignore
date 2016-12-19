@@ -5,3 +5,6 @@ front-end/demonstration/media/
 
 # ignore the notebook checkpoints
 Scripts/.ipynb_checkpoints/
+
+# ignore the models
+saved_models/
