@@ -1,5 +1,7 @@
 # ignore the data folder
 Data/
+front-end/demonstration/app/static/images
+front-end/demonstration/media/
 
 # ignore the notebook checkpoints
 Scripts/.ipynb_checkpoints/
