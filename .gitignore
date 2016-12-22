@@ -5,3 +5,10 @@ front-end/demonstration/media/
 
 # ignore the notebook checkpoints
 Scripts/.ipynb_checkpoints/
+
+# ignore the intellij files
+front-end/demonstration/.idea/
+modified:   front-end/demonstration/.idea/workspace.xml
+
+# ignore all the pyc files 
+*.pyc
