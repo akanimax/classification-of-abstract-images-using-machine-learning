@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <script src="{%  static "jquery/dist/jquery.js"%}"></script>
+    <script type="text/javascript" src="{% static "bootstrap/dist/js/bootstrap.min.js" %}"></script>
+    <script type="text/javascript" src="{% static "bootstrap-fileinput/js/plugins/canvas-to-blob.js"%}"></script>
+    <script type="text/javascript" src="{% static "bootstrap-fileinput/js/plugins/purify.js"%}"></script>
+    <script type="text/javascript" src="{% static "bootstrap-fileinput/js/plugins/sortable.js"%}"></script>
+    <script type="text/javascript" src="{% static "bootstrap-fileinput/js/fileinput.js"%}"></script>
+
+    <link rel="stylesheet" href="{% static "bootstrap/dist/css/bootstrap.min.css"%}">
+    <link rel="stylesheet" href="{% static "bootstrap/dist/css/bootstrap-theme.min.css"%}">
+    <link rel="stylesheet" href="{% static "bootstrap-fileinput/css/fileinput.css"%}">
+
+</head>
+<body>
+<h1 class="text-center">#ashtagger</h1>
+    <br>
+    <!--snippet for file upload-->
+    <form action="{% url 'results'%}"  method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+    <div class="container">
+      <div class="panel panel-default">
+        <div class="panel-heading"><strong>Upload Files</strong> </div>
+        <div class="panel-body">
+            <label class="control-label">Select File</label>
+               <input id="input-2" name="input[]" type="file" value="input" class="file" required multiple data-show-upload="false" data-show-caption="true">
+        </div>
+      </div>
+    </div> <!-- /container -->
+    <br>
+        <div class="text-center"><button id= "get hashtags" type="submit" class="btn btn-success btn-lg" >Get Hashtags</button></div>
+    </form>
+
+
+    <br>
+    <br>
+
+
+</body>
+</html>

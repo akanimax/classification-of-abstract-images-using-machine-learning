@@ -5,14 +5,3 @@ front-end/demonstration/media/
 
 # ignore the notebook checkpoints
 Scripts/.ipynb_checkpoints/
-
-<<<<<<< HEAD
-# ignore all the compiled python files:
-*.pyc
-
-# ignore all the files inside the .idea directory
-front-end/demonstration/.idea/*
-=======
-# ignore the models
-saved_models/
->>>>>>> 1eed45e63e7993eb9ec3b05ca0899ec84be7eb61
