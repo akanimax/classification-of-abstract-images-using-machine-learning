@@ -19,7 +19,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEMPLATE_DIRS=[os.path.join(BASE_DIR, 'templates')]
 
 #added
-MEDIA_ROOT = os.path.join(BASE_DIR, '/home/yash/PycharmProjects/demonstration/media/')
+MEDIA_ROOT = os.path.join(BASE_DIR, '/home/botman/Programming/Machine_Learning/BE/front-end/demonstration/media/')
 MEDIA_URL = '/media/'
 
 # Quick-start development settings - unsuitable for production
@@ -31,7 +31,7 @@ SECRET_KEY = '#6rvs^me325f-=5&cp9!k^=q!1nh7xjr7qfz1-*s3$!kk=u)4u'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["192.168.0.5"]
 
 
 # Application definition

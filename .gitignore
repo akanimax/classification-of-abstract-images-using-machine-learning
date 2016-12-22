@@ -3,3 +3,9 @@ Data/
 
 # ignore the notebook checkpoints
 Scripts/.ipynb_checkpoints/
+
+# ignore all the compiled python files:
+*.pyc
+
+# ignore all the files inside the .idea directory
+front-end/demonstration/.idea/*
