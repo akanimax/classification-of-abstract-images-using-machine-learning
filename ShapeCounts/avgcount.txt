@@ -1,0 +1,87 @@
+These are the average values
+
+HArdedge:
+	Total Files: 298
+	Pentagons: 7
+	Triangles: 9
+	Squares: 192
+	Circle: 40
+	HalfCircles: 8
+
+Concretism:
+	Total Files: 17
+	Pentagons: 6
+	Triangles: 8
+	Squares: 106
+	Circle: 30
+	HalfCircles: 5
+
+Action Painting
+	Total Files: 298
+	Pentagons: 21
+	Triangles: 22
+	Squares: 531
+	Circle: 171
+	HalfCircles: 28
+	
+Color Field:
+	Total Files: 297
+	Pentagons: 12
+	Triangles: 15
+	Squares: 226
+	Circle: 63
+	HalfCircles: 13
+	
+Op art:
+	Total Files: 246
+	Pentagons: 24
+	Triangles: 17
+	Squares: 327
+	Circle: 196
+	HalfCircles: 25
+
+Orphism:
+	Total Files: 214
+	Pentagons: 19
+	Triangles: 23
+	Squares: 607
+	Circle: 132
+	HalfCircles: 23
+	
+Cubism:
+	Total Files: 289
+	Pentagons: 30
+	Triangles: 34
+	Squares: 795
+	Circle: 212
+	HalfCircles: 36
+
+Surrealism
+	Total Files: 300
+	Pentagons: 22
+	Triangles: 24
+	Squares: 571
+	Circle: 190
+	HalfCircles: 30
+	
+Impressionism:
+	Total Files: 296
+	Pentagons: 45
+	Triangles: 52
+	Squares: 1128
+	Circle: 347
+	HalfCircles: 58
+
+Minimalism:
+	Total Files: 247
+	Pentagons: 16
+	Triangles: 20
+	Squares: 320
+	Circle: 129
+	HalfCircles: 21
+
+
+
+
+
+
