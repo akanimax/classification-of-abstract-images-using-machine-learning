@@ -1,5 +1,9 @@
 # ignore the data folder
-Data/
+# Data/
+
+# ignore the pickle file
+Data/Data_pindown.pickle
+
 front-end/demonstration/app/static/images
 front-end/demonstration/media/
 
