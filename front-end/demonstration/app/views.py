@@ -99,59 +99,48 @@ def results(request):
         wrapped_file = ImageFile(request.FILES[file_key])
         filename = wrapped_file.name
         fs = FileSystemStorage()
-	fs.delete("source")
-        filename = fs.save("source",request.FILES[file_key])
-        uploaded_file_url = fs.url(filename)
-        #print (uploaded_file_url+"******")
-	print(uploaded_file_url.split("/")[-1]);
+    fs.delete("source")
+    filename = fs.save("source",request.FILES[file_key])
+    uploaded_file_url = fs.url(filename)
+    #print (uploaded_file_url+"******")
+    print(uploaded_file_url.split("/")[-1])
+    Results=controller(uploaded_file_url.split("/")[-1])
+    print ("emotions are **************************")
 
-	color_emotion={}
-	color_emotion=controller(uploaded_file_url.split("/")[-1])
-	print ("emotions are **************************")
-	print (color_emotion)
-        jsonList = []; #print();
-        jsonList.append(
-            {"Artist": "Akanimax", "Style": "something", "Genre": "somethingelse", "ColouremotionAnalysis": "Angry",
-             "Brushstroke": "Soft"})
-        parsedData = []
-        userData = {}
-        for data in jsonList:
-            userData['Artist'] = data['Artist']
-            userData['Style'] = data['Style']
-            userData['Genre'] = data['Genre']
-            userData['ColouremotionAnalysis'] = data['ColouremotionAnalysis']
-            userData['Brushstroke'] = data['Brushstroke']
-	    
-           
-        userData['emotion']=color_emotion
-	parsedData.append(userData)
-	
-	#parsedData.append(color_emotion)
-	print (parsedData)
-        return render(req1, 'app-templates/results.html', {'data': parsedData})
+    keys=['EdgeCount','Pentagons','Triangles','Squares','Circles','HalfCircles','BlobCount','ColourCount']
+    values=Results[1]
 
-    return HttpResponse("error while storing image")
+    feature_dict=dict(zip(keys,values))
+
+    parsedData = []
+    parsedData.append(feature_dict)
+
+    #parsedData.append(color_emotion)
+    print (parsedData)
+    return render(req1, 'app-templates/results.html', {'data': parsedData})
+
 
 
 def controller(image_path):
-	'''print "image path recv is "+image_path
-	print(os.path.join(os.getcwd(), "app/scripts/color.py"))
-	process = sp.Popen(["/home/ccenter/new/BE/front-end/demonstration/app/scripts/color.py", image_path], stdout=sp.PIPE)
-	out = process.communicate()	    
-	return out'''
-	obj=Dominant_Color(image_path)
-	p=Process(target=obj.main())
-	p.start()
-	p.join()
 
-	obj2=GetFeatures(image_path)
-	p=Process(target=obj2.returnFeatures())
-	p.start()
-	p.join()
-	print "features are..............."
-	print obj2.features	
+    result_list=[]
 
-	return obj.color_emotion
+    obj=Dominant_Color(image_path)
+    p=Process(target=obj.main())
+    p.start()
+    p.join()
+
+    obj2=GetFeatures(image_path)
+    p=Process(target=obj2.returnFeatures())
+    p.start()
+    p.join()
+    print ("features are...............")
+    print (obj2.features)
+
+    result_list.append(obj.color_emotion)
+    result_list.append(obj2.features)
+
+    return result_list
 
 	
 

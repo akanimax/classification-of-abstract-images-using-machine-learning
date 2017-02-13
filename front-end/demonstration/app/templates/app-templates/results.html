@@ -19,62 +19,96 @@
         pace.start();
     </script>
     <div class="container">
-	<div class="row">
-		<div class="col-lg-4">
-			<h3> Original Image </h3>
-			<img src="/media/source" width="200px" height="100px"></img>
-    		</div>
-    		<div class="col-lg-4">
-			<h3> Dominant color palette </h3>
-			<img src="/media/dominant.png" width="200px" height="100px"></img>
-		</div>
-    		<div class="col-lg-4">
-			<h3> All color palette </h3>
-			<img src="/media/allpallettee.png" width="200px" height="100px"></img>
-    		</div>
-	</div>
-	<div class="row">
-		  {% for key in data %}
-                <p class="myclear">
-                    {{ key.emotion }}
-                <p>
-            {% endfor %}
-			
-	</div>
-    </div>
-    <br>
-    <br>
-    <h2 class="text-center">Prediction Results</h2>
-    <!--results-->
-	<div class="col-lg-12">
-        <div class="table-responsive">
-            <table class="table table-bordered table-hover table-striped tablesorter">
-                <thead>
-                <tr>
-                  <th class="header"> Artist <i class="icon-sort"></i></th>
-                  <th class="header"> Style <i class="icon-sort"></i></th>
-                  <th class="header"> Genre <i class="icon-sort"></i></th>
-                  <th class="header"> Colour emotion analysis<i class="icon-sort"></i></th>
-                  <th class="header"> Brushstroke <i class="icon-sort"></i></th>
+        <div class="row">
+                <div class="col-lg-6" style="text-align: left ; border-right: solid green; " >
 
-                </tr>
-            </thead>
-            <tbody>
+                            <h2><u>Original Image</u></h2>
+                            <br>
+                            <img src="/media/source" width="300px" height="300px">
+                            <br><br>
+                            <h2><u>Hashtags</u></h2>
+                                <p><h3>#Sample1</h3></p>
+                                <p><h3>#Sample2</h3></p>
+                                <p><h3>#Sample3</h3></p>
+                                <p><h3>#Sample4</h3></p>
 
-            {% for key in data %}
-                <tr>
-                    <td>{{ key.Artist }}</td>
-                    <td>{{ key.Style }}</td>
-                    <td>{{ key.Genre }}</td>
-                    <td>{{ key.ColouremotionAnalysis }}</td>
-                    <td>{{ key.Brushstroke }}</td>
+                </div>
 
-                </tr>
-            {% endfor %}
+                <div class="col-lg-6" style="text-align: center">
+                        <h2><u>Colour Emotion Analysis</u></h2>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-6" style="text-align: left">
+                                <h3> Dominant color palette </h3>
+                            </div>
+                            <div class="col-lg-6" style="text-align: right">
+                                <img src="/media/dominant.png" width="200px" height="100px">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-6" style="text-align: left">
+                                <h3> All color palette </h3>
+                            </div>
+                            <div class="col-lg-6" style="text-align: right">
+                                <img src="/media/allpallettee.png" width="200px" height="100px">
+                            </div>
+                            <br>
+                        </div>
+                        <br>
+                        <h2><u>Features Extracted</u></h2>
+                        <br>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-hover table-striped tablesorter">
+                                <thead>
+                                <tr>
+                                  <th class="header"> Edge Count <i class="icon-sort"></i></th>
+                                  <th class="header"> Pentagons <i class="icon-sort"></i></th>
+                                  <th class="header"> Triangles <i class="icon-sort"></i></th>
+                                  <th class="header"> Squares <i class="icon-sort"></i></th>
+                                  <th class="header"> Circles <i class="icon-sort"></i></th>
+                                  <th class="header"> HalfCircles <i class="icon-sort"></i></th>
+                                  <th class="header"> Blob Count <i class="icon-sort"></i></th>
+                                  <th class="header"> Colour Count <i class="icon-sort"></i></th>
 
-            </tbody>
-            </table>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                        {% for key in data %}
+                            <tr>
+                                <td>{{ key.EdgeCount }}</td>
+                                <td>{{ key.Pentagons }}</td>
+                                <td>{{ key.Triangles }}</td>
+                                <td>{{ key.Squares }}</td>
+                                <td>{{ key.Circles }}</td>
+                                <td>{{ key.HalfCircles }}</td>
+                                 <td>{{ key.BlobCount }}</td>
+                                 <td>{{ key.ColourCount }}</td>
+
+
+                            </tr>
+                        {% endfor %}
+
+                        </tbody>
+                        </table>
+                     </div>
+
+                </div>
         </div>
     </div>
+        <!--<div class="row">
+              {% for key in data %}
+                    <p class="myclear">
+                        {{ key.emotion }}
+                    <p>
+                {% endfor %}
+
+        </div>-->
+
+    <br>
+    <br>
+    <!--results-->
+
 </body>
 </html>

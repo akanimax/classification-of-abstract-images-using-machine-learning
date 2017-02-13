@@ -2,6 +2,9 @@
 <html>
 <head>
     {% load static %}
+    <script src="{% static "js/pace.js" %}"></script>
+    <link rel="stylesheet" href="{% static "css/corner.css" %}">
+    <script type="text/javascript" src="{% static "js/loader.js" %}"></script>
     <script src="{%  static "jquery/dist/jquery.js"%}"></script>
     <script type="text/javascript" src="{% static "bootstrap/dist/js/bootstrap.min.js" %}"></script>
     <script type="text/javascript" src="{% static "bootstrap-fileinput/js/plugins/canvas-to-blob.js"%}"></script>
@@ -13,25 +16,46 @@
     <link rel="stylesheet" href="{% static "bootstrap/dist/css/bootstrap-theme.min.css"%}">
     <link rel="stylesheet" href="{% static "bootstrap-fileinput/css/fileinput.css"%}">
 
+
+
+
+
 </head>
 <body>
+
+
+        <script>
+        pace.start();
+    </script>
+
 <h1 class="text-center">#ashtagger</h1>
     <br>
     <!--snippet for file upload-->
+
     <form action="{% url 'results'%}"  method="post" enctype="multipart/form-data">
         {% csrf_token %}
-    <div class="container">
-      <div class="panel panel-default">
-        <div class="panel-heading"><strong>Upload Files</strong> </div>
-        <div class="panel-body">
-            <label class="control-label">Select File</label>
-               <input id="input-2" name="input[]" type="file" value="input" class="file" required multiple data-show-upload="false" data-show-caption="true">
-        </div>
-      </div>
-    </div> <!-- /container -->
-    <br>
-        <div class="text-center"><button id= "get hashtags" type="submit" class="btn btn-success btn-lg" >Get Hashtags</button></div>
-    </form>
+        <div class="container">
+          <div class="panel panel-default">
+            <div class="panel-heading"><strong>Upload Files</strong> </div>
+            <div class="panel-body">
+                <label class="control-label">Select File</label>
+                   <input id="input-2" name="input[]" type="file" value="input" class="file" required multiple data-show-upload="false" data-show-caption="true">
+            </div>
+          </div>
+        </div> <!-- /container -->
+        <br>
+
+            <div class="text-center">
+
+                <button id= "gethashtags" type="submit"  class="btn btn-success btn-lg">Get Hashtags</button>
+                <br>
+                <br>
+                <img id="loader" style="display: none" src="{% static "images/default.gif" %}"  >
+            </div>
+
+
+        </form>
+
 
 
     <br>
