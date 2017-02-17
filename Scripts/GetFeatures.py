@@ -28,7 +28,7 @@ except ImportError:
 class GetFeatures:
     filepath=""
     features=[]
-    blackpath="media/black.png"
+    blackpath="black.png"
     TotalPent = 0
     TotalCircle = 0
     TotalHalfCircle = 0
@@ -41,7 +41,7 @@ class GetFeatures:
     def __init__(self,path):
        
 		# static file paths defined here
-		media_path = "/home/ccenter/new/17-02-2017_clone/BE/front-end/demonstration/media/" # media path for the user uploaded images
+		media_path = "/home/ccenter/new/17-02-2017_clone/BE/Scripts/" # media path for the user uploaded images
 		self.filepath = os.path.join(media_path, path)
 		print (self.filepath)
 		del self.features[:]

@@ -14,6 +14,8 @@ from keras.models import load_model
 
 class DnnClassifier:
 	model = load_model('/home/ccenter/new/17-02-2017_clone/BE/Data/Models/Model1/DnnClassifier.h5')
+	label_probability = {}
+
 	def __init__(self):
 		pass
 	def initializeLabels(self):
@@ -32,13 +34,12 @@ class DnnClassifier:
 	def returnProbabilities(self,features):
 		encoder=LabelEncoder()
 		encoder.classes_ = numpy.load('/home/ccenter/new/17-02-2017_clone/BE/Data/Models/Model1/classes.npy')
+		print(features)
 		probs =self.model.predict_proba(np.array([features]),verbose=1)
 		print(probs)
-		label_probability={}
 		for i in range (10):
-			label_probability[encoder.inverse_transform(i)]=probs[0][i]
-		print(label_probability)
-		return label_probability
+			self.label_probability[encoder.inverse_transform(i)]=probs[0][i]
+		print(self.label_probability)
 		
 	def returnClassPred(self):
 		encoder = LabelEncoder()
@@ -49,5 +50,3 @@ class DnnClassifier:
 		for i in range (10):
 			
 			print (encoder.inverse_transform(i))
-obj=DnnClassifier()
-#obj.returnProbabilities()
