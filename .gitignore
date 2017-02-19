@@ -3,6 +3,7 @@
 
 # ignore the pickle file
 Data/Data_pindown.pickle
+Data/PinDown__precisionistprecisionism-art/
 
 front-end/demonstration/app/static/images
 front-end/demonstration/media/
