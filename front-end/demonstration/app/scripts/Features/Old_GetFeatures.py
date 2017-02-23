@@ -1,11 +1,10 @@
 
 # coding: utf-8
-#--- 2.12477397919 seconds ---
 
 # # Script to Generate the Feature CSV FILE
 
 # In[1]:
-from multiprocessing import Process
+
 from skimage.transform import (hough_line, hough_line_peaks,
                                probabilistic_hough_line)
 from skimage.feature import canny
@@ -36,17 +35,13 @@ class GetFeatures:
     TotalSquare = 0
     TotalTri = 0
     color_dict = [(0,0,0),(255,255,255),(255,0,0),(0,255,0),(0,0,255),(127,127,127),(255,165,0),(255,255,0),(128,0,128),(165,42,42),(255,192,203)]
-    edge_count=0
-    shape_count=[None] * 5
-    blob_count=0
-    color_count=0
+
 
 
     def __init__(self,path):
        
 		# static file paths defined here
-		media_path = "/home/ccenter/new/17-02-2017_clone/BE/front-end/demonstration/media/" 
-		# media path for the user uploaded images
+		media_path = "/home/ccenter/new/17-02-2017_clone/BE/front-end/demonstration/media/" # media path for the user uploaded images
 		self.filepath = os.path.join(media_path, path)
 		print (self.filepath)
 		del self.features[:]
@@ -73,18 +68,25 @@ class GetFeatures:
         params.minArea = 10
         detector = cv2.SimpleBlobDetector(params)
         keypoints = detector.detect(im)
-        self.blob_count= len(keypoints)
+        return len(keypoints)
         
     
     def toBlack(self,image_file):
+		
         im_gray = cv2.imread(image_file, cv2.CV_LOAD_IMAGE_GRAYSCALE)
         (thresh, im_bw) = cv2.threshold(im_gray, 128, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU)
+        
+        #str_name=classname+"_"+str(count)+".jpg"
+        #str_path=self.black+str_name
         str_path=self.blackpath
+        
         cv2.imwrite(str_path, im_bw)
+        #time.sleep( 5 )
         cnt=self.detectEdges(str_path)
-        self.edge_count= cnt
+        return cnt
  
     def shapecount(self,string_path):
+        #print string_path 
         img = cv2.imread(string_path)
         gray = cv2.imread(string_path,0)
 
@@ -110,11 +112,7 @@ class GetFeatures:
             elif len(approx) > 9:
                 count_circle+=1
     
-        self.shape_count[0]=count_pent
-	self.shape_count[1]=count_tri
-	self.shape_count[2]=count_sq
-	self.shape_count[3]=count_halfcircle
-	self.shape_count[4]=count_circle
+        return [count_pent,count_tri,count_sq,count_halfcircle,count_circle]
 
     def getColorCount(self,rgb_colors):
         flags = [0,0,0,0,0,0,0,0,0,0,0]
@@ -157,25 +155,40 @@ class GetFeatures:
         for i in final_res:
             rgb_colors.append(tuple(i))
         col_count=self.getColorCount(rgb_colors)   
-        self.color_count= col_count
+        return col_count
     
     
     def returnFeatures(self):
-	start_time = time.time()
-        p1 = Process(target=self.toBlack(self.filepath))
-	p1.start()  
-	p2 = Process(target=self.getBlobs(self.filepath))
-	p2.start() 
-	p3 = Process(target=self.shapecount(self.filepath))
-	p3.start()
-	p4 = Process(target=self.getColors(self.filepath))
-	p4.start()
-
-	p1.join()
-	p2.join()
-	p3.join()
-	p4.join()
-        self.features=[self.edge_count,self.shape_count[0],self.shape_count[1],self.shape_count[2],self.shape_count[3],self.shape_count[4],self.blob_count,self.color_count]
+        
+        start_time = time.time()
+        
+   
+        
+            
+        
+        edge_count=self.toBlack(self.filepath)
+        blob_count=self.getBlobs(self.filepath)
+        shape_count=self.shapecount(self.filepath)
+        color_count=self.getColors(self.filepath)
+        self.features=[edge_count,shape_count[0],shape_count[1],shape_count[2],shape_count[3],shape_count[4],blob_count,color_count]
 	print("--- %s seconds ---" % (time.time() - start_time))
 
+            #self.addtoCSV(features_list)
+            
+    '''def addtoCSV(self,csventry):
+        with open('features.csv', 'a') as f:
+            writer = csv.writer(f)
+            writer.writerow(csventry)
+    ''' 
+
+
+# In[3]:
+   
+
+'''obj=Features()
+dirpath="./Data/Original/"
+class_names=sorted(os.listdir(dirpath))
+print class_names
+for class_name in class_names:
+    obj.returnFeatures(class_name)'''
 

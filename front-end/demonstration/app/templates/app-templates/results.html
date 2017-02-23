@@ -20,34 +20,35 @@
     </script>
     <div class="container">
         <div class="row">
-                <div class="col-lg-6" style="text-align: left ;  " >
+                <div class="col-lg-6" style="text-align: left ; border-right: solid green " >
 
                             <h2><u>Original Image</u></h2>
                             <br>
                             <img src="/media/source" width="300px" height="300px">
                             <br><br>
+			    <h2><u>Final Hashtags</u></h2>
+                                <p><h3> #{{ data.3.0.0 }} </h3></p>
+                                <p><h3> #{{ data.3.1.0 }} </h3></p>
+                                <p><h3> #{{ data.3.2.0 }} </h3></p>
                             <h2><u>CNN Hashtags</u></h2>
                                 <p><h3> #{{ data.0.0.0 }} </h3></p>
                                 <p><h3> #{{ data.0.1.0 }} </h3></p>
                                 <p><h3> #{{ data.0.2.0 }} </h3></p>
                              
 		
-                            <h2><u>DNN Hashtags</u></h2>
+                          	<h2><u>DNN Hashtags</u></h2>
                                 <p><h3> #{{ data.2.0.0 }} </h3></p>
                                 <p><h3> #{{ data.2.1.0 }} </h3></p>
                                 <p><h3> #{{ data.2.2.0 }} </h3></p>
                                 
 
                 
-			    <h2><u>final Hashtags</u></h2>
-                                <p><h3> #{{ data.3.1.0 }} </h3></p>
-                                <p><h3> #{{ data.3.0.0 }} </h3></p>
-                                <p><h3> #{{ data.3.2.0 }} </h3></p>
+			    
                                
 	
                 </div>
 
-                <div class="col-lg-6" style="text-align: center ;border-left: solid green">
+                <div class="col-lg-6" style="text-align: center ">
                         <h2><u>Colour Emotion Analysis</u></h2>
                         <br>
                         <div class="row">
@@ -70,7 +71,7 @@
                         </div>
                         <br>
                         <h2><u>Features Extracted</u></h2>
-                        <h3>Thresheld image</h3>
+                        <h3>Black & White image</h3>
                             <img src="/media/black.png" width="300px" height="300px"  >
                         <br>
                         <div class="table-responsive">
