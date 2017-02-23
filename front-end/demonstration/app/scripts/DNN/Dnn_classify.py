@@ -11,13 +11,15 @@ from sklearn.model_selection import KFold
 from sklearn.preprocessing import LabelEncoder
 from sklearn.pipeline import Pipeline
 from keras.models import load_model
+from keras.backend.tensorflow_backend import clear_session
+
 
 class DnnClassifier:
-	model = load_model('/home/ccenter/new/17-02-2017_clone/BE/Data/Models/Model1/DnnClassifier.h5')
-	label_probability = {}
 
 	def __init__(self):
-		pass
+		self.model = load_model('/home/ccenter/new/17-02-2017_clone/BE/Data/Models/Model1/DnnClassifier.h5')		
+		self.label_probability = {}
+
 	def initializeLabels(self):
 		dataframe = pandas.read_csv("final.csv",header=None)
 		dataset = dataframe.values
@@ -35,11 +37,13 @@ class DnnClassifier:
 		encoder=LabelEncoder()
 		encoder.classes_ = numpy.load('/home/ccenter/new/17-02-2017_clone/BE/Data/Models/Model1/classes.npy')
 		print(features)
-		probs =self.model.predict_proba(np.array([features]),verbose=1)
+		probs = self.model.predict_proba(np.array([features]),verbose=1)
 		print(probs)
 		for i in range (10):
 			self.label_probability[encoder.inverse_transform(i)]=probs[0][i]
 		print(self.label_probability)
+		
+		clear_session()
 		
 	def returnClassPred(self):
 		encoder = LabelEncoder()
@@ -50,3 +54,4 @@ class DnnClassifier:
 		for i in range (10):
 			
 			print (encoder.inverse_transform(i))
+

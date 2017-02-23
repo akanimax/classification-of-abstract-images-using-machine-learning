@@ -117,7 +117,7 @@ def get_predictions(path):
 
 
 
-
+        result = []
 	with tf.Session(graph=graph) as session:
 		saver = tf.train.Saver()
 
@@ -159,4 +159,6 @@ def get_predictions(path):
 		for (index, value) in tups:
 			labelled_predictions.append((label_mappings[index], value))		
 	
-		return sorted(labelled_predictions, key= lambda x: x[1], reverse=True)
+		result = sorted(labelled_predictions, key= lambda x: x[1], reverse=True)
+	del graph
+	return result

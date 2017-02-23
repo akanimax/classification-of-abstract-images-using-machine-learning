@@ -114,8 +114,8 @@ def results(request):
     parsedData = []
     parsedData.append(Results[0])
     parsedData.append(feature_dict)
-    #parsedData.append(Results[3])    
-    #parsedData.append(Results[4])
+    parsedData.append(Results[3])    
+    parsedData.append(Results[4])
 
     #parsedData.append(color_emotion)
     print (parsedData)
@@ -128,28 +128,22 @@ def controller(image_path):
     result_list=[]
 
     obj=Dominant_Color(image_path)
-    p=Process(target=obj.main())
-    p.start()
-    p.join()
+    obj.main()
+    
 
     obj2=GetFeatures(image_path)
-    p=Process(target=obj2.returnFeatures())
-    p.start()
-    p.join()
+    obj2.returnFeatures()
     print ("features are...............")
     print (obj2.features) 
 
-	
-    obj3 = DnnClassifier()
-    p=Process(target=obj3.returnProbabilities(obj2.features))
-    p.start()
-    p.join()
+    cnn_target = get_predictions(image_path)	
 
+    obj3 = DnnClassifier()
+    obj3.returnProbabilities(obj2.features)
+   
     dnn_target = obj3.label_probability	
     print(dnn_target)
-
-
-    cnn_target = get_predictions(image_path)
+    
     print(cnn_target)
     	
     def average(dict1,dict2):
@@ -178,6 +172,9 @@ def controller(image_path):
     result_list.append(obj2.features)
     result_list.append(dnn_target[:3])	
     result_list.append(avg_result[:3])
+
+    del obj3
+    del obj2	
 
     return result_list
 
