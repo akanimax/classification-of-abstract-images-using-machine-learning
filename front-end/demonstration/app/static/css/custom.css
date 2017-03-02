@@ -1,0 +1,46 @@
+.jumbotron > h1{
+    text-align: center;
+    color: white;
+    font-family: Futura;
+}
+
+.jumbotron > h3{
+    color: white;
+    text-align: center;
+    font-family: Futura;
+}
+
+.jumbotron{
+    padding-top: 1px;
+    padding-bottom: 1px;
+    background-color: black;
+}
+
+.list-group{
+    padding-top: 9px;
+    font-weight: bold;
+    font-size: larger;
+}
+
+@font-face {
+    font-family: Futura;
+    src: url(16020_FUTURAM.ttf);
+}
+
+.items{
+    background-color: darkgray;
+    color: white;
+}
+
+.caption{
+    font-weight: bold;
+    text-align: center;
+    font-size: large;
+}
+
+footer .footer-below {
+  padding: 25px 0;
+  background-color: #233140;
+  color: white;
+  text-align: center;
+}
