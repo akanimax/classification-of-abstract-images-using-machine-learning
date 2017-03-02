@@ -116,6 +116,7 @@ def results(request):
     parsedData.append(feature_dict)
     parsedData.append(Results[3])    
     parsedData.append(Results[4])
+    parsedData.append(Results[1].values())
 
     #parsedData.append(color_emotion)
     print (parsedData)
@@ -172,6 +173,12 @@ def controller(image_path):
     result_list.append(obj2.features)
     result_list.append(dnn_target[:3])	
     result_list.append(avg_result[:3])
+	
+
+    print ("********** ",result_list)
+ 
+
+    print ("********** ",obj.color_emotion)
 
     del obj3
     del obj2	
