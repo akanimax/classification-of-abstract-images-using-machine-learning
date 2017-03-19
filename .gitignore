@@ -5,6 +5,9 @@
 Data/Data_pindown.pickle
 Data/PinDown__precisionistprecisionism-art/
 
+# ignore the logs
+Data/logs/
+
 front-end/demonstration/app/static/images
 front-end/demonstration/media/
 

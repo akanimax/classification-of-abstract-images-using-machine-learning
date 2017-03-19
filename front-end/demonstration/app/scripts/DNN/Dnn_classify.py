@@ -17,7 +17,7 @@ from keras.backend.tensorflow_backend import clear_session
 class DnnClassifier:
 
 	def __init__(self):
-		self.model = load_model('/home/ccenter/new/17-02-2017_clone/BE/Data/Models/Model1/DnnClassifier.h5')		
+		self.model = load_model('/home/botman/Programming/Machine_Learning/BE/Data/Models/Model1/DnnClassifier.h5')		
 		self.label_probability = {}
 
 	def initializeLabels(self):
@@ -35,7 +35,7 @@ class DnnClassifier:
 
 	def returnProbabilities(self,features):
 		encoder=LabelEncoder()
-		encoder.classes_ = numpy.load('/home/ccenter/new/17-02-2017_clone/BE/Data/Models/Model1/classes.npy')
+		encoder.classes_ = numpy.load('/home/botman/Programming/Machine_Learning/BE/Data/Models/Model1/classes.npy')
 		print(features)
 		probs = self.model.predict_proba(np.array([features]),verbose=1)
 		print(probs)
@@ -47,7 +47,7 @@ class DnnClassifier:
 		
 	def returnClassPred(self):
 		encoder = LabelEncoder()
-		encoder.classes_ = numpy.load('/home/ccenter/new/17-02-2017_clone/BE/Data/Models/Model1/classes.npy')
+		encoder.classes_ = numpy.load('/home/botman/Programming/Machine_Learning/BE/Data/Models/Model1/classes.npy')
 		predictions = self.model.predict_classes(np.array([[1000,23,2,23,43,7,234,2]]))
 		print (predictions)
 		print (encoder.inverse_transform(predictions))		
