@@ -1,0 +1,83 @@
+\BOOKMARK [0][-]{chapter.1}{Synopsis}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Project Title}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.2}{ Project Option }{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.3}{Internal Guide}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.4}{ Sponsorship and External Guide}{chapter.1}% 5
+\BOOKMARK [1][-]{section.1.5}{Technical Keywords \(As per ACM Keywords\)}{chapter.1}% 6
+\BOOKMARK [1][-]{section.1.6}{Problem Statement}{chapter.1}% 7
+\BOOKMARK [1][-]{section.1.7}{Abstract}{chapter.1}% 8
+\BOOKMARK [1][-]{section.1.8}{Goals and Objectives}{chapter.1}% 9
+\BOOKMARK [1][-]{section.1.9}{Relevant mathematics associated with the Project}{chapter.1}% 10
+\BOOKMARK [1][-]{section.1.10}{Names of Conferences / Journals where papers can be published}{chapter.1}% 11
+\BOOKMARK [1][-]{section.1.11}{Review of Conference/Journal Papers supporting Project idea}{chapter.1}% 12
+\BOOKMARK [1][-]{section.1.12}{Plan of Project Execution}{chapter.1}% 13
+\BOOKMARK [0][-]{chapter.2}{Technical Keywords}{}% 14
+\BOOKMARK [1][-]{section.2.1}{Area of Project}{chapter.2}% 15
+\BOOKMARK [1][-]{section.2.2}{Technical Keywords}{chapter.2}% 16
+\BOOKMARK [0][-]{chapter.3}{Introduction}{}% 17
+\BOOKMARK [1][-]{section.3.1}{Project Idea}{chapter.3}% 18
+\BOOKMARK [1][-]{section.3.2}{Motivation of the Project}{chapter.3}% 19
+\BOOKMARK [1][-]{section.3.3}{Literature Survey}{chapter.3}% 20
+\BOOKMARK [0][-]{chapter.4}{Problem Definition and scope}{}% 21
+\BOOKMARK [1][-]{section.4.1}{Problem Statement}{chapter.4}% 22
+\BOOKMARK [2][-]{subsection.4.1.1}{Goals and objectives}{section.4.1}% 23
+\BOOKMARK [2][-]{subsection.4.1.2}{Statement of scope}{section.4.1}% 24
+\BOOKMARK [1][-]{section.4.2}{Software context}{chapter.4}% 25
+\BOOKMARK [1][-]{section.4.3}{Major Constraints}{chapter.4}% 26
+\BOOKMARK [1][-]{section.4.4}{Methodologies of Problem solving and efficiency issues}{chapter.4}% 27
+\BOOKMARK [1][-]{section.4.5}{Scenario in which multi-core, Embedded and Distributed Computing used}{chapter.4}% 28
+\BOOKMARK [1][-]{section.4.6}{Outcome}{chapter.4}% 29
+\BOOKMARK [1][-]{section.4.7}{Applications}{chapter.4}% 30
+\BOOKMARK [1][-]{section.4.8}{Hardware Resources Required}{chapter.4}% 31
+\BOOKMARK [1][-]{section.4.9}{Software Resources Required}{chapter.4}% 32
+\BOOKMARK [0][-]{chapter.5}{Project Plan}{}% 33
+\BOOKMARK [1][-]{section.5.1}{Project Estimates}{chapter.5}% 34
+\BOOKMARK [2][-]{subsection.5.1.1}{Reconciled Estimates}{section.5.1}% 35
+\BOOKMARK [2][-]{subsection.5.1.2}{Project Resources}{section.5.1}% 36
+\BOOKMARK [1][-]{section.5.2}{Risk Management w.r.t. NP Hard analysis}{chapter.5}% 37
+\BOOKMARK [2][-]{subsection.5.2.1}{Risk Identification}{section.5.2}% 38
+\BOOKMARK [2][-]{subsection.5.2.2}{Risk Analysis}{section.5.2}% 39
+\BOOKMARK [2][-]{subsection.5.2.3}{Overview of Risk Mitigation, Monitoring, Management}{section.5.2}% 40
+\BOOKMARK [1][-]{section.5.3}{Project Schedule}{chapter.5}% 41
+\BOOKMARK [2][-]{subsection.5.3.1}{Project task set}{section.5.3}% 42
+\BOOKMARK [2][-]{subsection.5.3.2}{Task network}{section.5.3}% 43
+\BOOKMARK [2][-]{subsection.5.3.3}{Timeline Chart}{section.5.3}% 44
+\BOOKMARK [1][-]{section.5.4}{Team Organization}{chapter.5}% 45
+\BOOKMARK [2][-]{subsection.5.4.1}{Team structure}{section.5.4}% 46
+\BOOKMARK [2][-]{subsection.5.4.2}{Management reporting and communication}{section.5.4}% 47
+\BOOKMARK [0][-]{chapter.6}{Software requirement specification \(SRS is to be prepared using relevant mathematics derived and software engg. Indicators in Annex A and B\)}{}% 48
+\BOOKMARK [1][-]{section.6.1}{Introduction}{chapter.6}% 49
+\BOOKMARK [2][-]{subsection.6.1.1}{Purpose and Scope of Document}{section.6.1}% 50
+\BOOKMARK [2][-]{subsection.6.1.2}{Overview of responsibilities of Developer}{section.6.1}% 51
+\BOOKMARK [1][-]{section.6.2}{Usage Scenario}{chapter.6}% 52
+\BOOKMARK [2][-]{subsection.6.2.1}{User profiles}{section.6.2}% 53
+\BOOKMARK [2][-]{subsection.6.2.2}{Use-cases}{section.6.2}% 54
+\BOOKMARK [2][-]{subsection.6.2.3}{Use Case View}{section.6.2}% 55
+\BOOKMARK [1][-]{section.6.3}{Data Model and Description}{chapter.6}% 56
+\BOOKMARK [2][-]{subsection.6.3.1}{Data Description}{section.6.3}% 57
+\BOOKMARK [2][-]{subsection.6.3.2}{Data objects and Relationships}{section.6.3}% 58
+\BOOKMARK [1][-]{section.6.4}{Functional Model and Description}{chapter.6}% 59
+\BOOKMARK [2][-]{subsection.6.4.1}{Data Flow Diagram}{section.6.4}% 60
+\BOOKMARK [2][-]{subsection.6.4.2}{Description of functions}{section.6.4}% 61
+\BOOKMARK [2][-]{subsection.6.4.3}{Activity Diagram:}{section.6.4}% 62
+\BOOKMARK [2][-]{subsection.6.4.4}{Non Functional Requirements:}{section.6.4}% 63
+\BOOKMARK [2][-]{subsection.6.4.5}{State Diagram:}{section.6.4}% 64
+\BOOKMARK [2][-]{subsection.6.4.6}{Design Constraints}{section.6.4}% 65
+\BOOKMARK [2][-]{subsection.6.4.7}{Software Interface Description}{section.6.4}% 66
+\BOOKMARK [0][-]{chapter.7}{Detailed Design Document using Appendix A and B}{}% 67
+\BOOKMARK [1][-]{section.7.1}{Introduction}{chapter.7}% 68
+\BOOKMARK [1][-]{section.7.2}{Architectural Design}{chapter.7}% 69
+\BOOKMARK [1][-]{section.7.3}{Data design \(using Appendices A and B\)}{chapter.7}% 70
+\BOOKMARK [2][-]{subsection.7.3.1}{Internal software data structure}{section.7.3}% 71
+\BOOKMARK [2][-]{subsection.7.3.2}{Global data structure}{section.7.3}% 72
+\BOOKMARK [2][-]{subsection.7.3.3}{Temporary data structure}{section.7.3}% 73
+\BOOKMARK [2][-]{subsection.7.3.4}{Database description}{section.7.3}% 74
+\BOOKMARK [1][-]{section.7.4}{Compoent Design}{chapter.7}% 75
+\BOOKMARK [2][-]{subsection.7.4.1}{Class Diagram}{section.7.4}% 76
+\BOOKMARK [0][-]{chapter.8}{Summary and Conclusion}{}% 77
+\BOOKMARK [0][-]{chapter.9}{References}{}% 78
+\BOOKMARK [0][-]{Annexure.1.A}{Annexure Laboratory assignments on Project Analysis of Algorithmic Design}{}% 79
+\BOOKMARK [0][-]{Annexure.1.B}{Annexure Laboratory assignments on Project Quality and Reliability Testing of Project Design}{}% 80
+\BOOKMARK [0][-]{Annexure.1.C}{Annexure Project Planner}{}% 81
+\BOOKMARK [0][-]{Annexure.1.D}{Annexure Reviewers Comments of Paper Submitted}{}% 82
+\BOOKMARK [0][-]{Annexure.1.E}{Annexure Plagiarism Report}{}% 83
