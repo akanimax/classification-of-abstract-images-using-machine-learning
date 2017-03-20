@@ -23,156 +23,166 @@
         </div>
     </header>
 
-    <div class="row">
-        <div class="col-lg-4 offset-lg-1">
-          <div class="card">
-            <div class="card-image">
-              <img class="img-fluid" src="/media/source"  >
-              <span class="card-title" style="font-weight: bold">Original Image</span>
-            </div>
-          </div>
-        </div>
+    <div class="container-fluid"> 
+		<div class="row">
+		    <div class="col-lg-4 offset-lg-1">
+		      <div class="card">
+		        <div class="card-image">
+		          <img class="img-fluid" src="/media/source"  >
+		          <span class="card-title" style="font-weight: bold">Original Image</span>
+		        </div>
+		      </div>
+		    </div>
 
-        <div class="col-lg-6 offset-lg-1">
-            <ul class="list-group">
-              <li class="list-group-item text-lg-center" style="background-color: dimgray; color: white"><h4><i>Final Hashtags</i></h4></li>
-              <li class="list-group-item text-lg-center items">#{{ data.3.0.0 }}</li>
-              <li class="list-group-item text-lg-center items">#{{ data.3.1.0 }}</li>
-              <li class="list-group-item text-lg-center items">#{{ data.3.2.0 }}</li>
-	      <li class="list-group-item text-lg-center items">#{{ data.4.0.0 }}</li>
-              <li class="list-group-item text-lg-center items">#{{ data.4.0.1 }}</li>
-              <li class="list-group-item text-lg-center items">#{{ data.4.1.0 }}</li>
-              <li class="list-group-item text-lg-center items">#{{ data.4.1.1 }}</li>
-            </ul>
-        </div>
+		    <div class="col-lg-6 offset-lg-1">
+		        <ul class="list-group">
+		          <li class="list-group-item text-lg-center" style="background-color: dimgray; color: white"><h4><i>Final Hashtags</i></h4></li>
+		          <li class="list-group-item text-lg-center items">#{{ data.3.0.0 }}</li>
+		          <li class="list-group-item text-lg-center items">#{{ data.3.1.0 }}</li>
+		          <li class="list-group-item text-lg-center items">#{{ data.3.2.0 }}</li>
+			  <li class="list-group-item text-lg-center items">#{{ data.4.0.0 }}</li>
+		          <li class="list-group-item text-lg-center items">#{{ data.4.0.1 }}</li>
+		          <li class="list-group-item text-lg-center items">#{{ data.4.1.0 }}</li>
+		          <li class="list-group-item text-lg-center items">#{{ data.4.1.1 }}</li>
+		        </ul>
+		    </div>
 
-    </div>
+		</div>
+	</div>
 
     <div class="jumbotron">
         <h3>Colour Emotion Analysis</h3>
     </div>
 
-    <div class="row">
-        <div class="col-lg-5 ">
-          <div class="card ">
-            <div class="card-image">
-              <img class="img-fluid" src="/media/allpallettee.png" width="200px" height="100px">
-              <div class="card-content caption" style="height: 99px;">
-                  All colour palette
-              </div>
-            </div>
-          </div>
-        </div>
+    <div class="container-fluid">
+		<div class="row">
+		    <div class="col-lg-5 ">
+		      <div class="card ">
+		        <div class="card-image">
+		          <img class="img-fluid" src="/media/allpallettee.png" width="200px" height="100px">
+		          <div class="card-content caption" style="height: 99px;">
+		              All colour palette
+		          </div>
+		        </div>
+		      </div>
+		    </div>
 
-        <div class="col-lg-2 ">
-          <div class="card ">
-            <div class="card-image">
-              <img class="img-fluid" src="/media/dominant.png" height="100px">
-              <div class="card-content caption">
-                  Dominant palette
-              </div>
-            </div>
-          </div>
-        </div>
+		    <div class="col-lg-2 ">
+		      <div class="card ">
+		        <div class="card-image">
+		          <img class="img-fluid" src="/media/dominant.png" height="100px">
+		          <div class="card-content caption">
+		              Dominant palette
+		          </div>
+		        </div>
+		      </div>
+		    </div>
 
-         <div class="col-lg-4">
-            <ul class="list-group">
-              <li class="list-group-item text-lg-center" style="background-color: dimgray; color: white"><h4><i>Colour Emotion HashTags </i></h4></li>
-              <li class="list-group-item text-lg-center list-group-item-info items">#{{ data.4.0.0 }}</li>
-              <li class="list-group-item text-lg-center list-group-item-info items">#{{ data.4.0.1 }}</li>
-              <li class="list-group-item text-lg-center list-group-item-info items">#{{ data.4.1.0 }}</li>
-              <li class="list-group-item text-lg-center list-group-item-info items">#{{ data.4.1.1 }}</li>
-            </ul>
-         </div>
-    </div>
+		     <div class="col-lg-4">
+		        <ul class="list-group">
+		          <li class="list-group-item text-lg-center" style="background-color: dimgray; color: white"><h4><i>Colour Emotion HashTags </i></h4></li>
+		          <li class="list-group-item text-lg-center list-group-item-info items">#{{ data.4.0.0 }}</li>
+		          <li class="list-group-item text-lg-center list-group-item-info items">#{{ data.4.0.1 }}</li>
+		          <li class="list-group-item text-lg-center list-group-item-info items">#{{ data.4.1.0 }}</li>
+		          <li class="list-group-item text-lg-center list-group-item-info items">#{{ data.4.1.1 }}</li>
+		        </ul>
+		     </div>
+		</div>
+	</div>
 
     <div class="jumbotron">
         <h3>CNN Analysis</h3>
     </div>
 
-    <div class="row">
+    <div class="container-fluid">
+		<div class="row">
 
-	<div class="col-lg-offset-2 col-lg-6">
-		<img class="img-responsive" src="/media/static/cnn.png" height="60%" width="60%"></img>
-	</div>
+			<div class="col-lg-offset-2 col-lg-6">
+				<img class="img-responsive" src="/media/static/cnn.png" height="60%" width="60%"></img>
+			</div>
 
-        <div class="col-lg-4">
-            <ul class="list-group">
-              <li class="list-group-item text-lg-center" style="background-color: dimgray; color: white"><h4><i>CNN HashTags </i></h4></li>
-              <li class="list-group-item text-lg-center list-group-item-info items">#{{ data.0.0.0 }}</li>
-              <li class="list-group-item text-lg-center list-group-item-info items">#{{ data.0.1.0 }}</li>
-              <li class="list-group-item text-lg-center list-group-item-info items">#{{ data.0.2.0 }}</li>
-              
-            </ul>
-         </div>
+		    <div class="col-lg-4">
+		        <ul class="list-group">
+		          <li class="list-group-item text-lg-center" style="background-color: dimgray; color: white"><h4><i>CNN HashTags </i></h4></li>
+		          <li class="list-group-item text-lg-center list-group-item-info items">#{{ data.0.0.0 }}</li>
+		          <li class="list-group-item text-lg-center list-group-item-info items">#{{ data.0.1.0 }}</li>
+		          <li class="list-group-item text-lg-center list-group-item-info items">#{{ data.0.2.0 }}</li>
+		          
+		        </ul>
+		     </div>
 	
-    </div>
+		</div>
+	</div>
 
     <div class="jumbotron">
         <h3>Feature Analysis</h3>
     </div>
 
-    <div class="row">
-        <div class="col-lg-3 ">
-          <div class="card">
-            <div class="card-image">
-              <img class="img-fluid" src="/media/black.png"  >
-              <div class="card-content caption">
-                  Black & White Image
-              </div>
-            </div>
-          </div>
-        </div>
+    
+	<div class="container-fluid">
+		<div class="row">
+		    <div class="col-lg-3 ">
+		      <div class="card">
+		        <div class="card-image">
+		          <img class="img-fluid" src="/media/black.png"  >
+		          <div class="card-content caption">
+		              Black & White Image
+		          </div>
+		        </div>
+		      </div>
+		    </div>
 
-        <div class="col-lg-9 ">
-            <div class="table-responsive">
-                            <table class="table table-bordered table-hover table-striped tablesorter">
-                                <thead>
-                                <tr>
-                                  <th class="header"> Edge Count <i class="icon-sort"></i></th>
-                                  <th class="header"> Pentagons <i class="icon-sort"></i></th>
-                                  <th class="header"> Triangles <i class="icon-sort"></i></th>
-                                  <th class="header"> Squares <i class="icon-sort"></i></th>
-                                  <th class="header"> Circles <i class="icon-sort"></i></th>
-                                  <th class="header"> HalfCircles <i class="icon-sort"></i></th>
-                                  <th class="header"> Blob Count <i class="icon-sort"></i></th>
-                                  <th class="header"> Colour Count <i class="icon-sort"></i></th>
+		    <div class="col-lg-9 ">
+		        <div class="table-responsive">
+		                        <table class="table table-bordered table-hover table-striped tablesorter">
+		                            <thead>
+		                            <tr>
+		                              <th class="header"> Edge Count <i class="icon-sort"></i></th>
+		                              <th class="header"> Pentagons <i class="icon-sort"></i></th>
+		                              <th class="header"> Triangles <i class="icon-sort"></i></th>
+		                              <th class="header"> Squares <i class="icon-sort"></i></th>
+		                              <th class="header"> Circles <i class="icon-sort"></i></th>
+		                              <th class="header"> HalfCircles <i class="icon-sort"></i></th>
+		                              <th class="header"> Blob Count <i class="icon-sort"></i></th>
+		                              <th class="header"> Colour Count <i class="icon-sort"></i></th>
 
-                                </tr>
-                            </thead>
-                            <tbody>
+		                            </tr>
+		                        </thead>
+		                        <tbody>
 
-                            <tr>
-                                <td> {{ data.1.EdgeCount }} </td>
-                                <td> {{ data.1.Pentagons }} </td>
-                                <td> {{ data.1.Triangles }} </td>
-                                <td> {{ data.1.Squares }} </td>
-                                <td> {{ data.1.Circles }} </td>
-                                <td> {{ data.1.HalfCircles }} </td>
-                                <td> {{ data.1.BlobCount }} </td>
-                                <td> {{ data.1.ColourCount }} </td>
-
-
-                            </tr>
-
-                        </tbody>
-                        </table>
-            </div>
-
-           <div class="col-lg-6 offset-lg-1">
-            <ul class="list-group">
-              <li class="list-group-item text-lg-center" style="background-color: dimgray; color: white"><h4><i>DNN Hashtags</i></h4></li>
-              <li class="list-group-item text-lg-center list-group-item-info items">#{{ data.2.0.0 }}</li>
-              <li class="list-group-item text-lg-center list-group-item-info items">#{{ data.2.1.0 }} </li>
-              <li class="list-group-item text-lg-center list-group-item-info items">#{{ data.2.2.0 }}</li>
-              
-            </ul>
-           </div>
+		                        <tr>
+		                            <td> {{ data.1.EdgeCount }} </td>
+		                            <td> {{ data.1.Pentagons }} </td>
+		                            <td> {{ data.1.Triangles }} </td>
+		                            <td> {{ data.1.Squares }} </td>
+		                            <td> {{ data.1.Circles }} </td>
+		                            <td> {{ data.1.HalfCircles }} </td>
+		                            <td> {{ data.1.BlobCount }} </td>
+		                            <td> {{ data.1.ColourCount }} </td>
 
 
-        </div>
+		                        </tr>
 
-    </div>
+		                    </tbody>
+		                    </table>
+		        </div>
+
+		       <div class="col-lg-6 offset-lg-1">
+		        <ul class="list-group">
+		          <li class="list-group-item text-lg-center" style="background-color: dimgray; color: white"><h4><i>DNN Hashtags</i></h4></li>
+		          <li class="list-group-item text-lg-center list-group-item-info items">#{{ data.2.0.0 }}</li>
+		          <li class="list-group-item text-lg-center list-group-item-info items">#{{ data.2.1.0 }} </li>
+		          <li class="list-group-item text-lg-center list-group-item-info items">#{{ data.2.2.0 }}</li>
+		          
+		        </ul>
+		       </div>
+
+
+		    </div>
+
+		</div>
+	</div>
+
     <footer class="text-center">
         <div class="footer-below">
             <div class="container">

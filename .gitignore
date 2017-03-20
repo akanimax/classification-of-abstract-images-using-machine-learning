@@ -5,7 +5,11 @@
 Data/Data_pindown.pickle
 Data/PinDown__precisionistprecisionism-art/
 
+<<<<<<< HEAD
 # ignore the logs of Data folder
+=======
+# ignore the logs
+>>>>>>> a3d15a648aa76385b5b020008cb6dce61b7d09ed
 Data/logs/
 
 front-end/demonstration/app/static/images
