@@ -55,3 +55,8 @@ class DnnClassifier:
 			
 			print (encoder.inverse_transform(i))
 
+
+
+
+
+

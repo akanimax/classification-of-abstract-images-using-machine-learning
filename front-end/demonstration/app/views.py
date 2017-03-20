@@ -21,13 +21,13 @@ import operator
 from PIL import Image, ImageDraw
 from collections import defaultdict
 import matplotlib.colors as colors
-
+import collections
 
 from scripts.Features.Dominant import *
 from scripts.Features.GetFeatures import *
 from scripts.DNN.Dnn_classify import *
 from scripts.CNN.cnn_predictor import *
-
+from scripts.Ensemble_classify import *
 
 
 
@@ -125,7 +125,29 @@ def results(request):
 
 
 def controller(image_path):
-
+    def Convert(data):
+        if isinstance(data, basestring):
+            return str(data)
+        elif isinstance(data, collections.Mapping):
+            return dict(map(Convert, data.iteritems()))
+        elif isinstance(data, collections.Iterable):
+            return type(data)(map(Convert, data))
+        else:
+            return data
+    def CreateSortedList(inp):
+        od = collections.OrderedDict(sorted(inp.items()))
+        retList=[]
+        for k, v in od.iteritems():
+            retList.append(v)
+        return retList
+    def Orchestrate(cnn,dnn):
+        csventry=[]
+        for val in cnn:
+            csventry.append(val)
+        for val in dnn:
+            csventry.append(val)
+        return csventry
+    
     result_list=[]
 
     obj=Dominant_Color(image_path)
@@ -139,28 +161,28 @@ def controller(image_path):
 
     cnn_target = get_predictions(image_path)	
 
-    obj3 = DnnClassifier()
+    obj3=DnnClassifier()	
     obj3.returnProbabilities(obj2.features)
    
     dnn_target = obj3.label_probability	
+    temp=Convert(dnn_target)
+    dnnOp=CreateSortedList(dnn_target)
+    
     print(dnn_target)
     
     print(cnn_target)
     	
-    def average(dict1,dict2):
-    	dict3={}
-    	for key in dict2.keys():
-        	dict3[key]=(0.7*dict1[key]+0.3*dict2[key])
-    	return dict3
-
     dict_cnn_target = dict(cnn_target)        
 
     dict_cnn_target['ActionPainting']=dict_cnn_target['Action-Painting']
     dict_cnn_target['Expressionism']=dict_cnn_target['art--Expressionism']
     del dict_cnn_target['Action-Painting']
     del dict_cnn_target['art--Expressionism']
-
-    avg_result = average(dict_cnn_target, dnn_target)
+    cnnOp=CreateSortedList(dict_cnn_target)	
+    
+    Enobj=EnsembleClassifier()
+    Enobj.returnProbabilities(Orchestrate(cnnOp,dnnOp))	
+    avg_result = Enobj.final_probabilities
 
     avg_result = sorted([(k, avg_result[k]) for k in avg_result.keys()], key=lambda x: x[1], reverse=True)
     dnn_target = sorted([(k, dnn_target[k]) for k in dnn_target.keys()], key=lambda x: x[1], reverse=True)	
