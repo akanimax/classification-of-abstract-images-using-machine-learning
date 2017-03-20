@@ -18,7 +18,7 @@ def get_predictions(path):
 
 	'''Set the constant paths here'''
 	# set the paths required for the script to work:
-	root = "/home/botman/Programming/Machine_Learning/BE/Data/"
+	root = "/home/ccenter/new/17-02-2017_clone/BE/Data/"
 	pickle_file_path = root + "Data_pindown.pickle"
 	log_path = root + "logs"
 
@@ -131,7 +131,7 @@ def get_predictions(path):
 		
 		label_mappings = dict([(label_mappings[k], k) for k in label_mappings.keys()])
 
-		img = Image.open("/home/botman/Programming/Machine_Learning/BE/front-end/demonstration/media/" + path)
+		img = Image.open("/home/ccenter/new/17-02-2017_clone/BE/front-end/demonstration/media/" + path)
 		img = img.resize((image_size, image_size), PIL.Image.ANTIALIAS)
 
 		img = np.array(img).astype(float)

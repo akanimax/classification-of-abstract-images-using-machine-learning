@@ -18,7 +18,7 @@ def get_predictions(path):
 
 	'''Set the constant paths here'''
 	# set the paths required for the script to work:
-	root = "./Models/"
+	root = "../../Data/"
 	pickle_file_path = root + "Data_pindown.pickle"
 	log_path = root + "logs"
 	
@@ -122,7 +122,7 @@ def get_predictions(path):
 		saver = tf.train.Saver()
 
 		# code to restore the session:
-		saver.restore(session, "./Models/mod_1.ckpt")
+		saver.restore(session, "../../Data/Models/Model1/mod_1.ckpt")
 
 		# get the label mappings
 		label_mappings = {}
@@ -137,11 +137,15 @@ def get_predictions(path):
 		img = np.array(img).astype(float)
 
 		
-		if(img.shape != (image_size, image_size, image_depth)):
+		if(img.shape == (image_size, image_size)):
 			#print("padding the image")
 			padded_image = np.zeros((image_size, image_size, image_depth), dtype=float)
 			padded_image[:, :, 0] = img
 			img = padded_image
+		
+		if(img.shape[2] > image_depth):
+			img = img[:, :, :image_depth]
+
 
 		# reshape the img to get the required shape
 		image = np.ndarray(shape=(1, image_size, image_size, image_depth), dtype=np.float32)

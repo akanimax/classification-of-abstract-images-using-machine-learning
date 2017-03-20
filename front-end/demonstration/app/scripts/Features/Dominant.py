@@ -73,7 +73,7 @@ class Dominant_Color:
 	def __init__(self, path):
 		print ("***************"+path)
 		# static file paths defined here
-		media_path = "/home/botman/Programming/Machine_Learning/BE/front-end/demonstration/media/" # media path for the user uploaded images
+		media_path = "/home/ccenter/new/17-02-2017_clone/BE/front-end/demonstration/media/" # media path for the user uploaded images
 		self.imgFile = os.path.join(media_path, path)
 		print (self.imgFile)
 		self.color_emotion.clear()
